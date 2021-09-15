@@ -1,0 +1,292 @@
+/** {
+  outline: 1px solid red;
+  }
+*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*Табы */
+.conteiner {
+  width: 1620px;
+  margin: 0 auto;
+}
+
+.tabs {
+}
+
+.tabs__items {
+  width: 65.4%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.tabs__item {
+  margin: 0 auto;
+  flex:0 0 33.33%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: #faf7f2;
+  justify-content: space-evenly;
+  border-right: 1px solid #f2efea;
+  border-top: 1px solid #f2efea;
+  border-left: 1px solid #f2efea;
+
+}
+
+.tabs__body {
+  font-size: 20px;
+  line-height: normal;
+}
+
+.tabs__block {
+  display: none;
+  position: relative;
+  border-top: 4px solid green;
+  margin: 0 auto;
+  height: 655px;
+}
+
+.tabs__map {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 655px;
+  justify-content: center;
+}
+
+.tabs__button-conteiner {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 28%;
+  justify-content: space-between;
+  bottom: 75px;
+
+}
+
+.tabs__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 190px;
+  height: 75px;
+  background-color: #ffffff;
+  border: 3px solid #e4e3e1;
+}
+
+.tabs__button_type_active {
+  border: 3px solid #009542;
+}
+
+
+.tabs__link {
+ font-family: "Raleway";
+ font-size: 18px;
+ font-weight: 500;
+ color: #858585;
+}
+
+.tabs__link-type-active {
+  color: #009542;
+}
+
+.tabs__icon-tick{
+  width: 15px;
+  height: 12px;
+  align-self: start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.tabs__icon-point{
+  width: 33px;
+  height: 40px;
+}
+
+
+
+.tabs__block:target {
+  display: block;
+}
+.tabs__block::before {
+  content: "";
+  height: 104px;
+  width: 22%;
+  position: absolute;
+  top: -104px;
+
+}
+.tabs__block:nth-child(1) {
+
+}
+.tabs__block:nth-child(1)::before {
+  border-top: 4px solid green;
+  border-left: 4px solid green;
+  border-right: 4px solid green;
+  border-bottom: 5px solid #faf7f2;
+  left: 280px;
+}
+
+.tabs__block:nth-child(2) {
+  background-color: rgb(225, 163, 72);
+}
+.tabs__block:nth-child(2)::before {
+  border-top: 4px solid green;
+  border-left: 4px solid green;
+  border-right: 4px solid green;
+  border-bottom: 5px solid  #faf7f2;
+  left: 39%;
+}
+
+.tabs__block:nth-child(3) {
+  background-color: rgb(154, 223, 174);
+}
+.tabs__block:nth-child(3)::before {
+  border-top: 4px solid green;
+  border-left: 4px solid green;
+  border-right: 4px solid green;
+  border-bottom: 5px solid  #faf7f2;
+  right: 280px;
+}
+
+/*Флажки с модальными окнами*/
+
+.point {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+
+.point__svg {
+  position: relative;
+  max-width: min-content;
+
+}
+
+.popup {
+  width: 250px;
+  max-height: 170px;
+  padding: 25px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  display: none;
+  top: -245px;
+  left: 18px;
+  box-sizing: border-box;
+}
+
+.popup_type_display {
+  display: block;
+
+}
+
+.popup::before {
+  content: "";
+	border: 20px solid transparent;
+  border-left: 20px solid #ffffff; 
+  border-top: 20px solid #ffffff; 
+  position: absolute;
+  left: 0px;
+  bottom: -30px;
+
+}
+.popup__window {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+.popup__icon-cross {
+  position: absolute; 
+  right: 10px;      
+  top: 10px;  
+  transform: rotate(45deg);
+  fill: #24b185;
+}
+
+.popup__title{
+  margin: 0;
+}
+
+.popup__text {
+  margin: 20px 0;
+}
+
+.popup__contact {
+  margin: 0;
+}
